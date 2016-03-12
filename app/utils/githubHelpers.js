@@ -46,9 +46,20 @@ function getPlayersData(player) {
 }
 
 function calculateScores(players) {
-  return [
-    players[0].followers * 3 + players[0].totalStars,    players[1].followers * 3 + players[1].totalStars
-  ]
+      return [
+        getHunterScore(players[0]),
+        getHunterScore(players[1])
+      ]
+}
+
+function getHunterScore(player) {
+  return (
+    (player.maker_of_count * 4) +
+    (player.posts_count * 4) +
+    (player.followers_count * 1) +
+    (player.collections_count * 2) +
+    (player.votes_count * 3)
+  );
 }
 
 
@@ -68,13 +79,14 @@ var helpers = {
   },
 
   battle: function(players){
-    var playerOneData = getPlayersData(players[0]);
-    var playerTwoData = getPlayersData(players[1]);
-    return axios.all([playerOneData, playerTwoData])
+    // var playerOneData = getPlayersData(players[0]);
+    // var playerTwoData = getPlayersData(players[1]);
+    return axios.all(players)
       .then(calculateScores)
       .catch(function(err) {
         console.warn("Error in getPlayersInfo ",err);
       });
+
   },
 
   getHuntersInfo: function (players) {

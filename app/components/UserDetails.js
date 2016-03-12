@@ -1,11 +1,12 @@
 var React = require('react');
 var PropTypes = React.PropTypes
-
-function UserDetails (user) {
-  user = user.user;
+var user;
+function UserDetails (props) {
+  
+  user = props.user;
   return (
     <div>
-      {!!user.score && <li className="list-group-item"><h3>Score: {user.score}</h3></li>}
+      {!!props.score && <li className="list-group-item"><h3>Score: {props.score}</h3></li>}
       <li className="list-group-item"> <img src={user.image_url.original} className="img-circle img-responsive center-block" width="200" height="200"/></li>
       {user.name && <li className="list-group-item robotoMedium">{user.name}</li>}
       <li className="list-group-item robotoMedium">Made {user.maker_of_count} Products</li>
