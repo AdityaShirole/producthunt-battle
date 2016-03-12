@@ -6,7 +6,7 @@ var PropTypes = React.PropTypes;
 function Prompt(props) {
   return(
     <div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={transparentBg}>
-        <h1>{props.header}</h1>
+        <h1 className="robotoMedium">{props.header}</h1>
         <div className="col-sm-12">
           <form onSubmit={props.onSubmitUser}>
 
@@ -21,7 +21,7 @@ function Prompt(props) {
 
             <div className="form-group col-sm-4 col-sm-offset-4">
               <button
-                className="btn tbn-block btn-success"
+                className="buttonPH"
                 type="submit">
                   Continue
                 </button>

@@ -18,11 +18,6 @@ var PromptContainer = React.createClass({
     e.preventDefault();
 
     var username = this.state.username;
-    githubHelpers.getHunterInfo('aditya_shirole')
-      .then(function(hunter) {
-          console.log('Hunter',hunter.data.user);
-      });
-
     this.setState({
       username: ''
     });

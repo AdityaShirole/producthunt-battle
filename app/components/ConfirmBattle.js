@@ -13,19 +13,28 @@ function puke(object) {
 }
 
 function ConfirmBattle(props) {
+
+  if (props.isLoading) {
+
+  } else {
+    console.log("PLAYER IN PROPS",props.playersInfo[0]);
+  }
+
+
+
   return props.isLoading === true
     ? <Loading speed={250} text='Waiting'/>
     : <MainContainer>
-        <h1>Confirm Players</h1>
+        <h2 className="robotoMedium">Confirm Hunters</h2>
 
         <div className="col-sm-8 col-sm-offset-2">
 
-          <UserDetailsWrapper header="Player One">
-            <UserDetails info={props.playersInfo[0]} />
+          <UserDetailsWrapper header="Hunter One">
+            <UserDetails user={props.playersInfo[0]} />
           </UserDetailsWrapper>
 
-          <UserDetailsWrapper header="Player Two">
-            <UserDetails info={props.playersInfo[1]} />
+          <UserDetailsWrapper header="Hunter Two">
+            <UserDetails user={props.playersInfo[1]} />
           </UserDetailsWrapper>
 
         </div>
@@ -33,7 +42,7 @@ function ConfirmBattle(props) {
         <div className="col-sm-8 col-sm-offset-2">
 
           <div className="col-sm-12" style={styles.space}>
-            <button type="button" className="btn btn-lg btn-success" onClick={props.onInitiateBattle}>
+            <button type="button" className="buttonPH" onClick={props.onInitiateBattle}>
               Initiate Battle
             </button>
           </div>
@@ -42,7 +51,7 @@ function ConfirmBattle(props) {
 
           <div className="col-sm-12" style={styles.space}>
             <Link to='/playerOne'>
-              <button type="button" className="btn btn-lg btn-danger">
+              <button type="button" className="buttonPH">
                 Reselect Players
               </button>
             </Link>

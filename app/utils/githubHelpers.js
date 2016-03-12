@@ -13,6 +13,11 @@ function getUserInfo(username) {
   return axios.get('https://api.github.com/users/' + username + param)
 }
 
+function getHunterInfo(username) {
+  return axios.get('https://api.producthunt.com/v1/users/' + username, config)
+}
+
+
 function getRepos(username) {
   //fetch usernames repos
   return axios.get('https://api.github.com/users/' + username + '/repos' + param + '?per_page=100');
@@ -72,8 +77,20 @@ var helpers = {
       });
   },
 
-  getHunterInfo: function (username) {
-    return axios.get('https://api.producthunt.com/v1/users/' + username, config)
+  getHuntersInfo: function (players) {
+    //fetch data from github
+    return axios.all(players.map(function(username) {
+      return getHunterInfo(username)
+    })).then(function(info) {
+      return info.map(function (hunter){
+        console.log("CHECK",hunter);
+        return hunter.data.user;
+      });
+    }).catch(function(error) {
+      console.warn("Error in playersInfo", error);
+    });
+
+
   }
 
 };

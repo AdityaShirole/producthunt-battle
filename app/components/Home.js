@@ -2,20 +2,26 @@ var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 
-var transparentBg = require('../styles').transparentBg;
 var MainContainer = require('../containers/MainContainer');
+var backgroundStyle = {
+    backgroundColor: '#D85537'
+}
 
 var Home = React.createClass({
+
   render: function() {
     return(
-      <MainContainer>
-        <h1>Github Battle</h1>
-        <p className='lead'>Some fancy motto</p>
-        <Link to='playerOne'>
-          <button type="button" className="btn btn-lg btn-success">Get Started</button>
-        </Link>
-
-      </MainContainer>
+      <div style={backgroundStyle}>
+        <MainContainer>
+          <img src="/app/kitty.png" width="400px" height="400px" className="img-responsive center-block"></img>
+          <p className='whiteText robotoMedium headerText'>Battle</p>
+          <p className='lead whiteText robotoMedium'>Hunter vs Hunter</p>
+          <p className='lead whiteText robotoMedium'>Find out the top Product Hunter</p>
+          <Link to='playerOne'>
+            <button type="button" className="buttonPH">Choose Hunters</button>
+          </Link>
+        </MainContainer>
+      </div>
     );
   }
 });

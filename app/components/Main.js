@@ -2,6 +2,10 @@ var React = require('react');
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 require('../main.css');
 
+var backgroundStyle = {
+    backgroundColor: '#D85537'
+}
+
 var Main = React.createClass({
   render: function() {
     return(
