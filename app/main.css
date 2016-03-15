@@ -67,10 +67,10 @@ h1 {
 
 @font-face {
     font-family: CovesLight;
-    src: url('/public/fonts/Coves_Light.otf');
+    src: url('https://s3-ap-southeast-1.amazonaws.com/hingecontestimage/fonts/Coves_Light.otf');
 }
 
 @font-face {
     font-family: CovesBold;
-    src: url('/public/fonts/Coves_Bold.otf');
+    src: url('https://s3-ap-southeast-1.amazonaws.com/hingecontestimage/fonts/Coves_Bold.otf');
 }
