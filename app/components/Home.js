@@ -13,7 +13,7 @@ var Home = React.createClass({
     return(
       <div style={backgroundStyle}>
         <MainContainer style={backgroundStyle}>
-          <img src="https://cloud.githubusercontent.com/assets/7839739/13784352/e68e71f2-eaf4-11e5-9bdd-e7c6c9b04d10.png" width="400px" height="400px" className="img-responsive center-block" style={backgroundStyle}></img>
+          <img   src="https://cloud.githubusercontent.com/assets/7839739/13784352/e68e71f2-eaf4-11e5-9bdd-e7c6c9b04d10.png" width="400px" height="400px" className="img-responsive center-block" style={backgroundStyle}></img>
 
           <p className='lead whiteText robotoMedium'>Hunter vs Hunter</p>
           <p className='lead whiteText robotoMedium'>Find out the top Product Hunter</p>
