@@ -5,17 +5,13 @@
   "main": "index.js",
   "scripts": {
     "production": "webpack -p",
-    "start": "webpack-dev-server",
-    "dist": "webpack -p",
-    "postinstall": "npm run dist",
+    "start": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
-
   "dependencies": {
     "axios": "^0.9.1",
     "react": "^0.14.7",
-    "express": "^4.13.1",
     "react-addons-css-transition-group": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0-rc5"
