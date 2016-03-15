@@ -1,10 +1,15 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 
+var headerStyle = {
+  color: 'white',
+  fontFamily: 'CovesBold'
+};
+
 function UserDetailsWrapper (props) {
     return (
       <div className="col-sm-6">
-        <p className="robotoMedium">{props.header}</p>
+        <h2 style={headerStyle}>{props.header}</h2>
         {props.children}
       </div>
     );

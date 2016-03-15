@@ -7,9 +7,15 @@ var Link = require('react-router').Link;
 var MainContainer = require('../containers/MainContainer');
 var Loading = require('./Loading');
 
+var headerStyle = {
+  color: 'white',
+  fontFamily: 'CovesBold'
+};
+
 function puke(object) {
   return <pre>{JSON.stringify(object,null, ' ')}</pre>
 }
+
 
 function StartOver() {
   return (
@@ -49,7 +55,7 @@ function Results(props) {
     ? <Loading text='One Moment'/>
     :
     <MainContainer>
-      <h1>Results</h1>
+      <h1 className="CovesBold" style={headerStyle}>Results</h1>
       <div className="col-sm-8 col-sm-offset-2">
         <UserDetailsWrapper header="Winner">
           <UserDetails score={props.scores[winningIndex]} user={props.playersInfo[winningIndex]} />

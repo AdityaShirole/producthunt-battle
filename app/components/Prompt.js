@@ -3,17 +3,22 @@ var transparentBg = require('../styles').transparentBg;
 
 var PropTypes = React.PropTypes;
 
+var headerStyle = {
+  color: 'white'
+
+}
+
 function Prompt(props) {
   return(
     <div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={transparentBg}>
-        <h1 className="robotoMedium">{props.header}</h1>
+        <h1 className="covesBold whiteText headerText" style={headerStyle}>{props.header}</h1>
         <div className="col-sm-12">
           <form onSubmit={props.onSubmitUser}>
 
             <div className="form-group">
               <input
                 className="form-control"
-                placeholder="Github Username"
+                placeholder="Product Hunt Username"
                 type="text"
                 onChange={props.onUpdateUser}
                 value={props.username}/>

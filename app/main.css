@@ -18,16 +18,27 @@
 }
 
 .robotoMedium {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-family: 'CovesLight', sans-serif;
+}
+
+.transparentBg {
+  background: 'transparent'
+}
+
+.covesBold {
+  font-family: 'CovesBold', sans-serif;
 }
 
 .headerText {
   margin-top: -48px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'CovesLight', sans-serif;
   font-size: 120px;
   font-weight: 400;
   color: #ffffff;
+}
+
+h1 {
+  color: '#ffffff'
 }
 
 .buttonPH {
@@ -39,8 +50,8 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#D85537;
-	font-family:'Roboto', sans-serif;;
-	font-size:17px;
+	font-family:'CovesBold', sans-serif;;
+	font-size:21px;
 	font-weight:500;
 	padding:16px 31px;
 	text-decoration:none;
@@ -52,4 +63,14 @@
 .buttonPH:active {
 	position:relative;
 	top:1px;
+}
+
+@font-face {
+    font-family: CovesLight;
+    src: url('/public/fonts/Coves_Light.otf');
+}
+
+@font-face {
+    font-family: CovesBold;
+    src: url('/public/fonts/Coves_Bold.otf');
 }

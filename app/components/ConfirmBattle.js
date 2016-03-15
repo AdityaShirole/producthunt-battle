@@ -25,7 +25,7 @@ function ConfirmBattle(props) {
   return props.isLoading === true
     ? <Loading speed={250} text='Waiting'/>
     : <MainContainer>
-        <h2 className="robotoMedium">Confirm Hunters</h2>
+        <h2 className="covesBold whiteText">Confirm Hunters</h2>
 
         <div className="col-sm-8 col-sm-offset-2">
 

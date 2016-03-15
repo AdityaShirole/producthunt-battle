@@ -12,9 +12,9 @@ var Home = React.createClass({
   render: function() {
     return(
       <div style={backgroundStyle}>
-        <MainContainer>
-          <img src="/app/kitty.png" width="400px" height="400px" className="img-responsive center-block"></img>
-          <p className='whiteText robotoMedium headerText'>Battle</p>
+        <MainContainer style={backgroundStyle}>
+          <img src="/app/kitty_edit.png" width="400px" height="400px" className="img-responsive center-block" style={backgroundStyle}></img>
+
           <p className='lead whiteText robotoMedium'>Hunter vs Hunter</p>
           <p className='lead whiteText robotoMedium'>Find out the top Product Hunter</p>
           <Link to='playerOne'>
